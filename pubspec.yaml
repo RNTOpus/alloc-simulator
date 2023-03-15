@@ -17,7 +17,6 @@ dependencies:
   http: ^0.13.5
   intl: ^0.18.0
   google_fonts: ^4.0.3
-  avatar_stack: ^1.1.2
   image_stack: ^2.1.1
 
 dev_dependencies:
