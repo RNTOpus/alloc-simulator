@@ -7,17 +7,23 @@ import 'package:image_stack/image_stack.dart';
 
 // ignore: must_be_immutable
 class AllocationCard extends StatelessWidget {
-  AllocationData data;
+  Allocation data;
   double? gap;
   Function()? onPressed;
 
   AllocationCard({Key? key, required this.data, this.onPressed, this.gap = 0})
       : super(key: key);
 
-  List<String> images = [
-    "https://github.com/RNTOpus.png",
-    "https://github.com/PauloRTesJr.png"
-  ];
+  List<String> getPhotos() {
+    List<String> photos = [];
+    var collaborators = data.collaborators;
+    if (collaborators.isNotEmpty) {
+      for (var collaborator in collaborators) {
+        photos.add(collaborator.photo);
+      }
+    }
+    return photos;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -40,8 +46,8 @@ class AllocationCard extends StatelessWidget {
             Column(
               children: [
                 ImageStack(
-                  imageList: images,
-                  totalCount: images.length,
+                  imageList: getPhotos(),
+                  totalCount: getPhotos().length,
                   imageRadius: 32,
                   imageCount: 3,
                   imageBorderWidth: 2,

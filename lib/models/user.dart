@@ -1,16 +1,20 @@
-class UserData {
+import 'package:alo_simulator/models/stack.dart';
+
+class User {
   String id;
   String fullName;
   String photo;
   String? job;
-  String? salary;
+  int? salary;
   String? supervisor;
+  Stack? knowledge;
 
-  UserData(
+  User(
       {required this.id,
       required this.fullName,
       required this.photo,
       this.job,
       this.salary,
-      this.supervisor});
+      this.supervisor,
+      this.knowledge});
 }

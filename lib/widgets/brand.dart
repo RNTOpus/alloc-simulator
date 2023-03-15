@@ -15,7 +15,7 @@ class Brand extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Text(
-            'Synergi',
+            'Allok',
             style: inHeader ? AloTextStyles.brandInHeader : AloTextStyles.brand,
           )
         ],

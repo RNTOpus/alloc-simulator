@@ -15,8 +15,6 @@ class Header extends StatelessWidget {
           Brand(inHeader: true),
           Row(
             children: [
-              Icon(Icons.filter_alt_outlined),
-              SizedBox(width: 8),
               IconButton(
                   visualDensity: VisualDensity.standard,
                   onPressed: () {

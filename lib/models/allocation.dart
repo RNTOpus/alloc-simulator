@@ -1,16 +1,22 @@
 // ignore: library_prefixes
+import 'package:alo_simulator/models/cost.dart';
+import 'package:alo_simulator/models/period.dart';
 import 'package:alo_simulator/models/user.dart';
 import 'package:flutter/material.dart';
 
-class AllocationData {
+class Allocation {
   String id;
   String title;
   Color? theme;
-  List<UserData> collaborators;
+  Period? period;
+  Cost? cost;
+  List<User> collaborators;
 
-  AllocationData(
+  Allocation(
       {required this.title,
       required this.id,
       required this.collaborators,
-      this.theme});
+      this.theme,
+      this.cost,
+      this.period});
 }
